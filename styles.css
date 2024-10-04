@@ -1,0 +1,543 @@
+/* General Reset and Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#8787e7, 10%, rgb(47, 47, 47), rgb(110, 154, 212));
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    transition: background 1s ease; /* Smooth background transition */
+}
+
+/* Navbar Styling */
+#navbar {
+    background: transparent;
+    padding: 35px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease; /* Navbar background transition */
+}
+
+#navbar.scrolled {
+    background: rgba(0, 0, 0, 0.5); /* Darken background on scroll */
+  
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    margin: 0 15px;
+}
+
+#navbar a {
+    color: #beb9b9;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s; /* Hover effects */
+    font-family: monospace;
+}
+
+#navbar a:hover {
+    color: beige;
+    text-shadow: 0 0 10px rgb(224, 230, 33);
+    font-size: larger;
+    font-weight: bold;
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Hero Section Styling */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: transparent;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Fade-in effect for hero section */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-decorative-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    animation: typing 3s steps(40, end) infinite;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.hero-right h2 {
+    font-size: 3rem;
+    margin: 0;
+    animation: swing 2s ease-in-out infinite;
+}
+
+.hero-right p {
+    font-size: 1.5rem;
+    color: #d9d9d9;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+h2,p {
+    font-weight: 200;
+    margin: 0.4em 0;
+  }
+  h2 { font-size: 3.5em; }
+  p {
+    color: #888;
+    font-size: 2em;
+  }
+
+/* Projects Section Styling */
+/* General Styling for Projects Section */
+#projects {
+    padding: 60px 20px;
+    background: transparent;
+    color: #fff;
+}
+
+.projects-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: beige;
+}
+
+.projects-header p {
+    font-size: 1.4rem;
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Styling for Project Items */
+.project-item {
+    background: #2c3e50;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 350px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.image-wrapper {
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(0.7);
+}
+
+.project-item:hover .background-image {
+    transform: scale(1.1);
+}
+
+/* Card Content */
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.project-description {
+    padding: 20px;
+    background: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: auto;
+    transition: background 0.3s ease;
+}
+
+.project-item:hover .project-description {
+    background: linear-gradient(to right, #4a5658, #8cb4dc);
+}
+
+/* Styling for Innovative Ideas Section */
+.innovative-ideas {
+    margin-top: 60px;
+    padding: 60px 20px;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+}
+
+.innovative-ideas h2 {
+    font-size: 2.5rem;
+    color: blanchedalmond;
+    margin-bottom: 40px;
+}
+
+.innovative-ideas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.idea-card {
+    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    padding: 30px;
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.idea-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.idea-card p {
+    font-size: 1.1rem;
+    color: #f5f5f5;
+}
+
+.idea-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #aec8e3, #353b40);
+}
+
+/* Contact Section Styling */
+/* Contact Section Styling */
+#contact {
+    padding: 60px 20px;
+    background: transparent; /* Gradient background */
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    animation: fadeIn 1.5s ease-out; /* Fade-in effect for the whole container */
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background for contrast */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Left Side Styling */
+.contact-left h3 {
+    font-size: 1.8rem;
+    color: #f6d196;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ecf0f1;
+}
+
+
+
+/* Social Media Icons Styling */
+.social-media {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-media p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+}
+
+.icons a {
+    display: inline-block;
+    width: 50px; /* Width of the icon */
+    height: 50px; /* Height of the icon */
+    border-radius: 50%; /* Circular shape */
+    background-color: #333; /* Background color */
+    color: #fff; /* Icon color */
+    font-size: 1.5rem; /* Font size for icons */
+    text-align: center; /* Center align icon */
+    line-height: 50px; /* Center icon vertically */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.icons a:hover {
+    background-color: #b9c3c9; /* Change background on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+/* Right Side Styling */
+.contact-right h3 {
+    font-size: 1.8rem;
+    color: beige;
+    margin-bottom: 20px;
+}
+
+.contact-right p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+.contact-right a {
+    color: #87adea;
+    text-decoration: none;
+}
+
+.contact-right a:hover {
+    text-decoration: underline;
+}
+
+/* Conclusion */
+.conclusion {
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgb(240, 248, 255,0.5);
+}
+
+.conclusion p {
+    font-size: 1.3rem;
+    color: black;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.skills-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
+  
+  .skills-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ebba7e;
+  }
+  
+  .skills-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skills-logos img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-logos img:hover {
+    transform: scale(1.2);
+  }
+  
+/* Default styles (Desktop First Approach) */
+
+/* Mobile Devices (up to 600px width) */
+@media (max-width: 600px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-left, .hero-right {
+        flex: 1;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem; /* Smaller headings */
+    }
+
+    .hero-right h2 {
+        font-size: 2rem;
+    }
+
+    .skills-logos img {
+        width: 60px; /* Reduce skill icon size */
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%; /* Make project cards full-width */
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+}
+
+/* Tablet Devices (up to 900px width) */
+@media (max-width: 900px) {
+    .hero-right h2 {
+        font-size: 2.5rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 80%; /* Slightly larger cards on tablet */
+    }
+
+    .skills-logos img {
+        width: 70px; /* Reduce skill icon size */
+    }
+}
+
+/* Larger Mobile Devices (up to 768px width) */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .skills-section {
+        padding: 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .project-item {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
