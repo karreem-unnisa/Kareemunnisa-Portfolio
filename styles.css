@@ -541,3 +541,45 @@ h2,p {
         align-items: center;
     }
 }
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column; /* Stack left and right content */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 40px 20px; /* Add padding */
+        text-align: center; /* Center text */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .hero-left, .hero-right {
+        align-items: center; /* Center items */
+        text-align: center; /* Center text */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .hero-decorative-image {
+        width: 80px; /* Reduce image size for smaller screens */
+    }
+
+    .hero-right h2 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .hero-right p {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+}
+
+/* Smaller Devices */
+@media (max-width: 480px) {
+    .hero-right h2 {
+        font-size: 2rem; /* Further reduce font size */
+    }
+
+    .hero-right p {
+        font-size: 1rem; /* Further reduce font size */
+    }
+}
